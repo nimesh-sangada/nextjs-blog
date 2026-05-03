@@ -20,6 +20,21 @@
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  background: #f9f5ef;
+  color: #2c2416;
+  font-family: 'DM Sans', sans-serif;
+  height: 100%;
+}
+
 /* Sab kuch comment out karo — sirf Tailwind rakho 
 
 body {

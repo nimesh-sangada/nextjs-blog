@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Pagination from "./Pagination"
 import { WPPost, SearchParams } from '@/types/wordpress'
+import Header from '../components/Header'
 
 export default async function Blogs({ searchParams}: { searchParams: SearchParams }) {
     const { page } = await searchParams
@@ -18,7 +19,8 @@ export default async function Blogs({ searchParams}: { searchParams: SearchParam
     console.log(totalPages)
 
     return (
-       
+        <>
+          <Header />
 
 
         <div className="max-w-4xl mx-auto px-4 py-8">
@@ -70,6 +72,7 @@ export default async function Blogs({ searchParams}: { searchParams: SearchParam
             </div>
             {/* Pagination — Client Component */}
             <Pagination currentPage={currentPage} totalPages={totalPages} />
-        </div>
+            </div>
+            </>
     )
 }
